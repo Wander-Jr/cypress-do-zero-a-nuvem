@@ -9,3 +9,10 @@ jobs:
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
+
+        env:
+          # Record key is required to record the run in Cypress Dashboard
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+        
+        with:
+          command: npm run test:cloud
