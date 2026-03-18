@@ -13,6 +13,6 @@ jobs:
         env:
           # Record key is required to record the run in Cypress Dashboard
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+
         with:
-           start: npm start
-           wait-on: 'http://localhost:3000' # Waits for above
+          command: npm run test:cloud
